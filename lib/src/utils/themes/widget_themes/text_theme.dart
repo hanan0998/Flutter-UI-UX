@@ -13,12 +13,12 @@ class hTextTheme {
           color: Colors.black, fontSize: 26, fontWeight: FontWeight.bold),
       headlineSmall: GoogleFonts.poppins(
           color: Colors.black, fontSize: 26, fontWeight: FontWeight.bold),
-      bodySmall: TextStyle(fontSize: 20, color: Colors.black),
+      bodySmall: TextStyle(fontSize: 17, color: Colors.black),
       bodyLarge: TextStyle(color: Colors.black),
       bodyMedium: TextStyle(
           color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
       displayLarge: GoogleFonts.poppins(
-          fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold));
+          fontSize: 20, color: Colors.white, fontWeight: FontWeight.bold));
 
   static TextTheme DarkTheme = TextTheme(
       headlineLarge: GoogleFonts.montserrat(
@@ -29,7 +29,7 @@ class hTextTheme {
           color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold),
       headlineSmall: GoogleFonts.poppins(
           color: Colors.white, fontSize: 26, fontWeight: FontWeight.bold),
-      bodySmall: TextStyle(fontSize: 20, color: Colors.white),
+      bodySmall: TextStyle(fontSize: 17, color: Colors.white),
       bodyLarge: TextStyle(color: Colors.white),
       bodyMedium: TextStyle(
           color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),

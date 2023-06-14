@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../common widget/fade_in_animation/fade_in_animation_controller.dart';
+import '../signup_screen/signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -21,8 +22,7 @@ class WelcomeScreen extends StatelessWidget {
     var brightness = mediaQuery.platformBrightness;
     var isDarkMode = brightness == Brightness.dark;
 
-
-       final controller = Get.put(FadeInAnimationController());
+    final controller = Get.put(FadeInAnimationController());
     controller.startWelcomeScreenAnimation();
     return Scaffold(
         backgroundColor: isDarkMode ? hSecondaryColor : hPrimaryColor,
@@ -72,7 +72,7 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                           Expanded(
                               child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () => Get.to(SignUpScreen()),
                             child: Text(hSignup.toUpperCase()),
                           )),
                         ],

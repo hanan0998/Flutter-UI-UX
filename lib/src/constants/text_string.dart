@@ -4,8 +4,10 @@ const hAppTagLine = "Learn To Code. \nFree For Everyone";
 /* Generic Text */
 const String hLogin = "Login";
 const String hSignup = "Signup";
-const String hEmail = "Email";
+const String hEmail = "E-mail";
 const String hPassword = "Password";
+const String hFullName = "Full Name";
+const String hPhoneNumber = "Phone No";
 
 /* onboarding text */
 
@@ -38,3 +40,7 @@ const String hRememberMe = "Remember Me?";
 const String hAlreadyAccount = "Already have an Account?";
 const String hForgetPassword = "Forget Password?";
 const String hDonthaveAccount = "Don't have an Account? ";
+
+/* Sign up Text */
+const String hSignUpTitle = "Get on Board!";
+const String hSignUpSubTitle = "Creat your profile to start your journey.";
