@@ -7,11 +7,17 @@ class FormHeaderWidget extends StatelessWidget {
   final String image;
   final String title;
   final String subtitle;
+  final double? height;
+  final CrossAxisAlignment crossAxisAlignments;
+  final double? heightBetween;
 
   FormHeaderWidget({
     required this.image,
     required this.title,
     required this.subtitle,
+    this.height = 0.2,
+    this.crossAxisAlignments = CrossAxisAlignment.start,
+    this.heightBetween = 0,
   });
 
   // final Size size;
@@ -20,15 +26,19 @@ class FormHeaderWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: crossAxisAlignments,
       children: [
         Image(
           image: AssetImage(image),
-          height: size.height * 0.2,
+          height: size.height * height!,
+        ),
+        SizedBox(
+          height: heightBetween,
         ),
         Text(title, style: Theme.of(context).textTheme.headlineSmall),
         Text(
           subtitle,
+          textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodySmall,
         ),
       ],

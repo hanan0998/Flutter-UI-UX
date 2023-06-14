@@ -10,10 +10,12 @@ const String hOnBoardingImage2 =
 const String hOnBoardingImage3 =
     'assets/images/onBoarding/onboarding_image3.png';
 
-
 // welcome screen imgaes
 const String hWelcomeScreenImage = "assets/images/welcome/welcome1.png";
 
 // login screen images
- const String hLoginScreeImage = "assets/images/welcome/loginPage.png";
- const String hGoogleImage = "assets/logo/loginGoogle.png";
+const String hLoginScreeImage = "assets/images/welcome/loginPage.png";
+const String hGoogleImage = "assets/logo/loginGoogle.png";
+
+/* Froget Screen Image */
+const String hForgetScreenImage = "assets/images/forget_password/forget.png";

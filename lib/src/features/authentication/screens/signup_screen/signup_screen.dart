@@ -1,5 +1,5 @@
 import 'package:app_login/src/common%20widget/form/form_header_widget.dart';
-import 'package:app_login/src/constants/colors.dart';
+// import 'package:app_login/src/constants/colors.dart';
 import 'package:app_login/src/constants/image_strings.dart';
 import 'package:app_login/src/constants/sizes.dart';
 import 'package:app_login/src/constants/text_string.dart';

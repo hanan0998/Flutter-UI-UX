@@ -44,3 +44,16 @@ const String hDonthaveAccount = "Don't have an Account? ";
 /* Sign up Text */
 const String hSignUpTitle = "Get on Board!";
 const String hSignUpSubTitle = "Creat your profile to start your journey.";
+
+/* Froget Password Text */
+
+const String hForgetPasswordTitle = "Make Selection!";
+const String hForgetPasswordSubTitle =
+    "Select one of the opions given below to reset the password.";
+const String hResetViaEmail = "Reset via E-Mail Verification.";
+const String hResetViaPhone = "Reset via Phone Verification";
+
+const String hForgetPhoneSubTitle =
+    "Enter your registered Phone No to receive OTP";
+const String hForgetEmailSubTitle =
+    "Enter your registered E-Mail to receive OTP";

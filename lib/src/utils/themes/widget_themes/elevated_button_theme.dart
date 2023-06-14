@@ -8,21 +8,21 @@ class hElevatedButtonTheme {
   /* light */
   static final lightElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-                elevation: 0.0,
-                  shape: RoundedRectangleBorder(),
-                  foregroundColor: HWhiteColor,
-                  backgroundColor: hSecondaryColor,
-                  side: BorderSide(color: hSecondaryColor),
-                  padding: EdgeInsets.symmetric(vertical: hButtonSize)),
+        elevation: 0.0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        foregroundColor: HWhiteColor,
+        backgroundColor: hSecondaryColor,
+        side: BorderSide(color: hSecondaryColor),
+        padding: EdgeInsets.symmetric(vertical: hButtonSize)),
   );
   /* dark */
   static final darkElevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-                elevation: 0.0,
-                  shape: RoundedRectangleBorder(),
-                  foregroundColor: hSecondaryColor,
-                  backgroundColor: HWhiteColor,
-                  side: BorderSide(color: hSecondaryColor),
-                  padding: EdgeInsets.symmetric(vertical: hButtonSize)),
+        elevation: 0.0,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+        foregroundColor: hSecondaryColor,
+        backgroundColor: HWhiteColor,
+        side: BorderSide(color: hSecondaryColor),
+        padding: EdgeInsets.symmetric(vertical: hButtonSize)),
   );
 }

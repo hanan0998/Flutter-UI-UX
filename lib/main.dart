@@ -1,6 +1,7 @@
 import 'package:app_login/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:app_login/src/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
@@ -15,6 +16,8 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
+      defaultTransition: Transition.leftToRightWithFade,
+      transitionDuration: const Duration(milliseconds: 500),
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: SplashScreen(),
