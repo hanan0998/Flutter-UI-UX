@@ -1,3 +1,4 @@
+import 'package:app_login/src/features/authentication/screens/forget_screen/forget_password_otp/forget_password_otp_screen.dart';
 import 'package:app_login/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:app_login/src/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,10 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: SplashScreen(),
+      initialRoute: 'OTPScreen',
+      routes: {
+        'OTPScreen': (context) => OTPScreen(),
+      },
     );
   }
 }

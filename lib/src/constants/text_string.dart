@@ -8,6 +8,7 @@ const String hEmail = "E-mail";
 const String hPassword = "Password";
 const String hFullName = "Full Name";
 const String hPhoneNumber = "Phone No";
+const String hNext = "Next";
 
 /* onboarding text */
 
@@ -57,3 +58,8 @@ const String hForgetPhoneSubTitle =
     "Enter your registered Phone No to receive OTP";
 const String hForgetEmailSubTitle =
     "Enter your registered E-Mail to receive OTP";
+
+/* Otp Screen */
+const String hOtpTitle = "CO\nDE";
+const String hOtpSubTitle = "Verification";
+const String hOtpMessage = "Enter the verification code send at ";
