@@ -1,4 +1,4 @@
-const hAppName = '.appable/';
+const hAppName = '.appable </>';
 const hAppTagLine = "Learn To Code. \nFree For Everyone";
 
 /* Generic Text */
@@ -63,3 +63,13 @@ const String hForgetEmailSubTitle =
 const String hOtpTitle = "CO\nDE";
 const String hOtpSubTitle = "Verification";
 const String hOtpMessage = "Enter the verification code send at ";
+
+/* Dashboard texts */
+const String hDashboardTitle = "Hey, code with Hanan";
+const String hDashboardHeading = "Explore Courses";
+const String hDashboardSearch = "Search...";
+const String hDashboardBannerTitle1 = "Android for Beginners";
+const String hDashboardBannerTitle2 = "Java";
+const String hDashboardBannerSubTitle = "10 Lessons";
+const String hDashboardButton = "View All";
+const String hDashboardTopCourses = "Top Courses";

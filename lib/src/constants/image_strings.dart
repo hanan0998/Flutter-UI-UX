@@ -19,3 +19,12 @@ const String hGoogleImage = "assets/logo/loginGoogle.png";
 
 /* Froget Screen Image */
 const String hForgetScreenImage = "assets/images/forget_password/forget.png";
+
+/* Dashboard Screen images */
+const String hUserProfileImage = "assets/images/dashboard/manIcon.png";
+const String hBookMarkIcon = "assets/images/dashboard/bookMark.png";
+const String hBannerImage1 = "assets/images/dashboard/imageBanner1.png";
+const String bBannerImage2 = "assets/images/dashboard/imageBanner2.png";
+const String hTopCoursImage1 = "assets/images/dashboard/topCourseImage1.png";
+const String hTopCoursImage2 = "assets/images/dashboard/topCourseImage2.png";
+const String hTopCoursImage3 = "assets/images/dashboard/topCourseImage3.png";

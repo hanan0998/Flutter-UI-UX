@@ -1,5 +1,6 @@
 import 'package:app_login/src/features/authentication/screens/forget_screen/forget_password_otp/forget_password_otp_screen.dart';
 import 'package:app_login/src/features/authentication/screens/splash_screen/splash_screen.dart';
+import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
 import 'package:app_login/src/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,9 +23,10 @@ class MyApp extends StatelessWidget {
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
       home: SplashScreen(),
-      initialRoute: 'OTPScreen',
+      initialRoute: 'dashboard-screen',
       routes: {
         'OTPScreen': (context) => OTPScreen(),
+        'dashboard-screen': (context) => DashboardScreen(),
       },
     );
   }

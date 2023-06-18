@@ -1,5 +1,7 @@
 // import 'package:app_login/src/constants/sizes.dart';
+import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../constants/text_string.dart';
 import '../forget_screen/forget_password_options/forget_password_bottom_sheet.dart';
@@ -72,7 +74,7 @@ class LoginForm extends StatelessWidget {
               height: 60,
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => DashboardScreen()),
                   child: Text(
                     hLogin.toUpperCase(),
                     style: Theme.of(context).textTheme.displayLarge,
