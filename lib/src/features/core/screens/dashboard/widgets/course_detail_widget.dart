@@ -53,8 +53,8 @@ class CourseDetailListViewWidget extends StatelessWidget {
                           width: 110,
                           child: Image(
                             image: AssetImage(
-                                // list[index].image!,
-                                hTopCoursImage1),
+                              list[index].image!,
+                            ),
                             // height: 110,
                           ),
                         ),

@@ -1,3 +1,4 @@
+import 'package:app_login/src/repository/authentication/authentication_repository.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../constants/colors.dart';
@@ -34,7 +35,9 @@ class ImplementedAppBar extends StatelessWidget implements PreferredSizeWidget {
             color: HCardbgColor,
           ),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              AuthenticationRepoController.instance.logout();
+            },
             icon: Image(image: AssetImage(hUserProfileImage)),
           ),
         )

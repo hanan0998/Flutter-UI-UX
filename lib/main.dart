@@ -1,12 +1,22 @@
+import 'package:app_login/firebase_options.dart';
 import 'package:app_login/src/features/authentication/screens/forget_screen/forget_password_otp/forget_password_otp_screen.dart';
 import 'package:app_login/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
+import 'package:app_login/src/repository/authentication/authentication_repository.dart';
 import 'package:app_login/src/utils/themes/theme.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+// import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform).then(
+    // to run the onready function
+    (value) => Get.put(
+      AuthenticationRepoController(),
+    ),
+  );
   runApp(const MyApp());
 }
 
@@ -22,8 +32,8 @@ class MyApp extends StatelessWidget {
       transitionDuration: const Duration(milliseconds: 500),
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
-      home: SplashScreen(),
-      initialRoute: 'dashboard-screen',
+      home: CircularProgressIndicator(),
+      // initialRoute: 'dashboard-screen',
       routes: {
         'OTPScreen': (context) => OTPScreen(),
         'dashboard-screen': (context) => DashboardScreen(),
