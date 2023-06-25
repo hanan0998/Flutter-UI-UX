@@ -1,6 +1,6 @@
 import 'package:app_login/firebase_options.dart';
 import 'package:app_login/src/features/authentication/screens/forget_screen/forget_password_otp/forget_password_otp_screen.dart';
-import 'package:app_login/src/features/authentication/screens/splash_screen/splash_screen.dart';
+// import 'package:app_login/src/features/authentication/screens/splash_screen/splash_screen.dart';
 import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
 import 'package:app_login/src/repository/authentication/authentication_repository.dart';
 import 'package:app_login/src/utils/themes/theme.dart';

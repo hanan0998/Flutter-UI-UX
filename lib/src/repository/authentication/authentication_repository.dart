@@ -1,3 +1,7 @@
+// import 'dart:html';
+
+// import 'dart:html';
+
 import 'package:app_login/src/features/authentication/screens/welcome/welcome_screen.dart';
 import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
 import 'package:app_login/src/repository/exceptions/signup_email_password_failure.dart';
@@ -10,6 +14,8 @@ class AuthenticationRepoController extends GetxController {
   final _auth = FirebaseAuth.instance;
   // make the variable of User datatype and Rx to observe the changes in it'
   late final Rx<User?> firebaseUser;
+  // to get the verfication id from otp
+  var verficationId = ''.obs;
 
   @override
   void onReady() {
@@ -64,4 +70,37 @@ class AuthenticationRepoController extends GetxController {
 
   // method to logout the user
   Future<void> logout() async => await _auth.signOut();
+
+  // to add phoneNumber authentication
+  Future<void> phoneAuthentication(String phone) async {
+    await _auth.verifyPhoneNumber(
+      phoneNumber: phone,
+      verificationCompleted: (Credential) async {
+        // so when the verification completed user will login in with credential
+        await _auth.signInWithCredential(Credential);
+      },
+      codeSent: (verificationId, forceResendingToken) {
+        this.verficationId.value = verificationId;
+      },
+      codeAutoRetrievalTimeout: (verificationId) {
+        // we also need the verificationid whent he code resend
+        this.verficationId.value = verificationId;
+      },
+      verificationFailed: (e) {
+        if (e.code == "invalid-phone-number") {
+          Get.snackbar("Error", "The provided phone number is not valid");
+        } else {
+          Get.snackbar("Error", "Something went wrong. Try Again");
+        }
+      },
+    );
+  }
+
+  // to verify the otp
+  Future<bool> verifyOTP(String otp) async {
+    var UserCredential = _auth.signInWithCredential(
+        PhoneAuthProvider.credential(
+            verificationId: verficationId.value, smsCode: otp));
+    return UserCredential.isBlank == true ? false : true;
+  }
 }

@@ -6,11 +6,15 @@ import 'package:app_login/src/features/authentication/screens/forget_screen/forg
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../controllers/opt_controller.dart';
+
 class ForgetPasswordPhoneScreen extends StatelessWidget {
   const ForgetPasswordPhoneScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final otpController = Get.put(OTPController());
+    var otp;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(

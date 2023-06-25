@@ -1,4 +1,6 @@
+import 'package:app_login/src/features/authentication/controllers/opt_controller.dart';
 import 'package:app_login/src/features/authentication/controllers/signup_screen_controllor.dart';
+import 'package:app_login/src/features/authentication/screens/forget_screen/forget_password_otp/forget_password_otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,6 +15,7 @@ class SignUpFormWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignUpController());
+
     // this key is given to form
     final _formKey = GlobalKey<FormState>();
     return Container(
@@ -76,9 +79,13 @@ class SignUpFormWidget extends StatelessWidget {
                   child: ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
-                          SignUpController.instance.registerUser(
-                              controller.email.text.trim(),
-                              controller.password.text.trim());
+                          // SignUpController.instance.registerUser(
+                          //     controller.email.text.trim(),
+                          //     controller.password.text.trim());
+
+                          SignUpController.instance.phoneAuthentication(
+                              controller.phoneNO.text.trim());
+                          Get.to(() => const OTPScreen());
                         }
                       },
                       child: Text(hSignup.toUpperCase(),

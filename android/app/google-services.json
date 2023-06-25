@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1056091409025-0vsn6lt5kddvtqdt7j41bfm8fn6g603i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_login",
+            "certificate_hash": "5d4d8c0412fe444ac1378f457c2b5245a14ed9ac"
+          }
+        },
+        {
           "client_id": "1056091409025-s4vpns2p0f6jjetlsrtgfqd999ie29eu.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "1056091409025-s4vpns2p0f6jjetlsrtgfqd999ie29eu.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1056091409025-s6nlqmv5lfln5n4vd2ksamchivm30qa7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.appLogin"
+              }
             }
           ]
         }
