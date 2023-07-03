@@ -1,5 +1,6 @@
 import 'package:app_login/src/features/authentication/controllers/opt_controller.dart';
 import 'package:app_login/src/features/authentication/controllers/signup_screen_controllor.dart';
+import 'package:app_login/src/features/authentication/models/user_model.dart';
 import 'package:app_login/src/features/authentication/screens/forget_screen/forget_password_otp/forget_password_otp_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -82,10 +83,18 @@ class SignUpFormWidget extends StatelessWidget {
                           // SignUpController.instance.registerUser(
                           //     controller.email.text.trim(),
                           //     controller.password.text.trim());
+//////////// for phone number authentication
+                          // SignUpController.instance.phoneAuthentication(
+                          //     controller.phoneNO.text.trim());
+                          // Get.to(() => const OTPScreen());
 
-                          SignUpController.instance.phoneAuthentication(
-                              controller.phoneNO.text.trim());
-                          Get.to(() => const OTPScreen());
+                          //////////// for storing data in the firestore
+                          final user = UserModel(
+                              fullName: controller.fullName.text.trim(),
+                              email: controller.email.text.trim(),
+                              phoneNo: controller.phoneNO.text.trim(),
+                              password: controller.password.text.trim());
+                          SignUpController.instance.creatUser(user);
                         }
                       },
                       child: Text(hSignup.toUpperCase(),

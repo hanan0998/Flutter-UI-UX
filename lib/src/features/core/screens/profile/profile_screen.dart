@@ -21,7 +21,10 @@ class ProfileScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         leading: IconButton(
-            onPressed: () {}, icon: Icon(LineAwesomeIcons.angle_left)),
+            onPressed: () {
+              Get.back();
+            },
+            icon: Icon(LineAwesomeIcons.angle_left)),
         title: Text(
           hProfile,
           textAlign: TextAlign.center,
