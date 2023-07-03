@@ -73,3 +73,23 @@ const String hDashboardBannerTitle2 = "Java";
 const String hDashboardBannerSubTitle = "10 Lessons";
 const String hDashboardButton = "View All";
 const String hDashboardTopCourses = "Top Courses";
+
+/* Profile Screen Text */
+
+const String hProfile = "Profile";
+const String hEditProfile = "Edit Profile";
+const String hLogoutDialogHeading = "Logout";
+const String hProfileHeading = "Coding with Hanan";
+const String hProfileSubHeading = "superadmin@codewithHanan.com";
+// menu
+const String hMenu5 = "Log Out";
+const String hMenu1 = "Settings";
+const String hMenu4 = "Information";
+const String hMenu2 = "Billing Details";
+const String hMenu3 = "User Management";
+
+/* updating Profile screen text */
+
+const String hDelete = "Delete";
+const String hJoined = "Joined ";
+const String hJoinedAt = "31 October 2022";

@@ -43,6 +43,7 @@ dependencies:
   flutter_otp_text_field: ^1.1.1
   firebase_core: ^2.14.0
   firebase_auth: ^4.6.3
+  line_awesome_flutter: ^2.0.0
    
 
 dev_dependencies:
@@ -89,6 +90,7 @@ flutter:
     - assets/logo/
     - assets/images/forget_password/
     - assets/images/dashboard/ 
+    - assets/images/profile/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

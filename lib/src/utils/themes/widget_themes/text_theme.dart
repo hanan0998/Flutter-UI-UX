@@ -24,7 +24,8 @@ class hTextTheme {
       displaySmall: TextStyle(
           color: Colors.black, fontSize: 15, fontWeight: FontWeight.normal),
       labelSmall: TextStyle(
-          fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black));
+          fontSize: 16, fontWeight: FontWeight.bold, color: Colors.black),
+      labelMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.normal));
 
   static TextTheme DarkTheme = TextTheme(
       headlineLarge: GoogleFonts.montserrat(
@@ -44,7 +45,8 @@ class hTextTheme {
       displayMedium: TextStyle(
           color: Colors.white, fontSize: 25, fontWeight: FontWeight.bold),
       displaySmall: TextStyle(
-          color: Colors.white, fontSize: 15, fontWeight: FontWeight.normal),
+          color: Colors.white, fontSize: 16, fontWeight: FontWeight.normal),
       labelSmall: TextStyle(
-          fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white));
+          fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+      labelMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.normal));
 }

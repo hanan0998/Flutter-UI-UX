@@ -1,5 +1,7 @@
+import 'package:app_login/src/features/core/screens/profile/profile_screen.dart';
 import 'package:app_login/src/repository/authentication/authentication_repository.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../constants/colors.dart';
 import '../../../../../constants/image_strings.dart';
@@ -36,7 +38,8 @@ class ImplementedAppBar extends StatelessWidget implements PreferredSizeWidget {
           ),
           child: IconButton(
             onPressed: () {
-              AuthenticationRepoController.instance.logout();
+              // AuthenticationRepoController.instance.logout();
+              Get.to(ProfileScreen());
             },
             icon: Image(image: AssetImage(hUserProfileImage)),
           ),

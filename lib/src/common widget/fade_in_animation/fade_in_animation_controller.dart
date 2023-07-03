@@ -1,6 +1,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:get';
 import 'package:app_login/src/features/authentication/screens/welcome/welcome_screen.dart';
+import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
 import 'package:get/get.dart';
 
 // import '../screens/onBoarding_screen/onboarding_screen.dart';
@@ -19,7 +20,7 @@ class FadeInAnimationController extends GetxController {
     animate.value = false;
     await Future.delayed(Duration(milliseconds: 2400));
 
-    Get.offAll(() => WelcomeScreen());
+    Get.offAll(() => DashboardScreen());
   }
 
   Future startWelcomeScreenAnimation() async {
