@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class UserModel {
   final String? id;
   final String fullName;
@@ -20,5 +22,19 @@ class UserModel {
       "PhoneNo": phoneNo,
       "Password": password
     };
+  }
+
+// map user fetched data from firebase to usermodel
+// when we fetch data from firebase firestore it give us data in from of document snapshot
+  factory UserModel.fromDocumentSnapShot(
+      DocumentSnapshot<Map<String, dynamic>> document) {
+    // document.data() give us the full data white document.get() give us some specific things like email, phoneno, etc.
+    final data = document.data()!;
+    return UserModel(
+        id: document.id,
+        fullName: data["FullName"],
+        email: data["Email"],
+        phoneNo: data["PhoneNo"],
+        password: data["Password"]);
   }
 }

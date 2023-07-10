@@ -1,3 +1,4 @@
+import 'package:app_login/src/features/core/screens/dashboard/dashboardScreen.dart';
 import 'package:app_login/src/repository/authentication/authentication_repository.dart';
 import 'package:app_login/src/repository/user_repository/user_repository.dart';
 import 'package:flutter/widgets.dart';
@@ -27,7 +28,7 @@ class SignUpController extends GetxController {
 
   Future<void> creatUser(UserModel user) async {
     await userRepo.addUser(user);
-    phoneAuthentication(user.phoneNo);
-    Get.to(() => OTPScreen());
+    registerUser(user.email, user.password);
+    Get.to(() => DashboardScreen());
   }
 }
