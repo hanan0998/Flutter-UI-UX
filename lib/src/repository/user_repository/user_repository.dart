@@ -33,4 +33,21 @@ class UserRepository extends GetxController {
       print(error.toString());
     });
   }
+
+// for getting the singleuser data from firestore
+  Future<UserModel> getUserDetails(String email) async {
+    final snapshot =
+        await _db.collection("Users").where("Email", isEqualTo: email).get();
+    final userData =
+        snapshot.docs.map((e) => UserModel.fromDocumentSnapShot(e)).single;
+    return userData;
+  }
+
+// for getting the alluser data from firestore
+  Future<List<UserModel>> allUsers() async {
+    final snapshot = await _db.collection("Users").get();
+    final userData =
+        snapshot.docs.map((e) => UserModel.fromDocumentSnapShot(e)).toList();
+    return userData;
+  }
 }
